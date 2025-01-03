@@ -17,4 +17,4 @@ RUN cd PKGBUILDs/mesa-asahi && makepkg -s --noconfirm
 RUN ls PKGBUILDs/mesa-asahi/*.xz
 
 FROM scratch AS export-stage
-COPY --from=builder /home/user/PKGBUILDs/mesa-asahi/mesa-asahi-fex*.xz /
+COPY --from=builder /home/user/PKGBUILDs/mesa-asahi/mesa-asahi-*.xz /
